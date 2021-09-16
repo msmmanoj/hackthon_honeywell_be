@@ -2,10 +2,10 @@ const express = require('express');
 
 const router = express.Router();
 
-const adminController = require('../controllers/spaceController');
+const spaceController = require('../controllers/spaceController');
 
-router.get('/',adminController.getAPIDetails);
+router.get('/',spaceController.getAPIDetails);
 
-router.get('/search',adminController.getAPIDetailsBySearch);
+router.get('/search',spaceController.getAPIDetailsBySearch);
 
 module.exports = router;
