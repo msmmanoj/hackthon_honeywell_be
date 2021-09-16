@@ -1,0 +1,162 @@
+[
+  {
+    "api_id": 1,
+    "name": "SpaceX Info API",
+    "type": "Get",
+    "category": "Info",
+    "description": "Get Basic info of SpaceX Organisation",
+    "response": [{
+      "name": "SpaceX",
+      "founder": "Elon Musk",
+      "founded": 2002,
+      "employees": 7000,
+      "vehicles": 3,
+      "launch_sites": 3
+    }],
+    "parameters": null,
+    "api_call": "https://api.space.com/info",
+    "subscriptions": {
+      "currency": "dollar",
+      "yearly": 100,
+      "monthly": 15
+    }
+  },
+  {
+    "api_id": 2,
+    "name": "SpaceX Launchpads",
+    "category": "Launch Pads",
+    "description": "Get All Available Launch Pads",
+    "type": "Get",
+    "response": [
+      {
+        "id": "LZ-1",
+        "full_name": "Landing Zone 1",
+        "status": "active",
+        "location": {
+          "name": "Cape Canaveral",
+          "region": "Florida",
+          "latitude": 28.485833,
+          "longitude": -80.544444
+        },
+        "landing_type": "RTLS",
+        "details": "SpaceX's first east coast landing pad is Landing Zone 1, where the historic first Falcon 9 landing occurred in December 2015. LC-13 was originally used as a launch pad for early Atlas missiles and rockets from Lockheed Martin. LC-1 was later expanded to include Landing Zone 2 for side booster RTLS Falcon Heavy missions, and it was first used in February 2018 for that purpose."
+      },
+      {
+        "id": "LZ-2",
+        "full_name": "Landing Zone 2",
+        "status": "active",
+        "location": {
+          "name": "Cape Canaveral",
+          "region": "Florida",
+          "latitude": 28.485833,
+          "longitude": -80.544444
+        },
+        "landing_type": "RTLS",
+        "details": "SpaceX's first east coast landing pad is Landing Zone 1, where the historic first Falcon 9 landing occurred in December 2015. LC-13 was originally used as a launch pad for early Atlas missiles and rockets from Lockheed Martin. LC-1 was later expanded to include Landing Zone 2 for side booster RTLS Falcon Heavy missions, and it was first used in February 2018 for that purpose."
+      },
+      {
+        "id": "LZ-4",
+        "full_name": "Landing Zone 4",
+        "status": "active",
+        "location": {
+          "name": "Vandenberg Air Force Base",
+          "region": "California",
+          "latitude": 34.632989,
+          "longitude": -120.615167
+        },
+        "landing_type": "RTLS",
+        "details": "SpaceX's west coast landing pad. The pad is adjacent to SLC-4E, SpaceX's west coast launch site. The pad was under construction for about a year starting in 2016. After concerns with seal mating season, this pad was first used for the SAOCOM 1A mission in October 2018. Officially referred to as LZ-4 in FCC filings."
+      }
+    ],
+    "parameters": null,
+    "api_call": "https://api.space.com/launchpads",
+    "subscriptions": {
+      "currency": "dollar",
+      "yearly": 100,
+      "monthly": 15
+    }
+  },
+  {
+    "api_id": 3,
+    "name": "SpaceX Launchpads",
+    "category": "Launch Pads",
+    "description": "Get Specific Launch Pad based on given id",
+    "type": "Get",
+    "response": [
+      {
+        "id": "LZ-1",
+        "full_name": "Landing Zone 1",
+        "status": "active",
+        "location": {
+          "name": "Cape Canaveral",
+          "region": "Florida",
+          "latitude": 28.485833,
+          "longitude": -80.544444
+        },
+        "landing_type": "RTLS",
+        "details": "SpaceX's first east coast landing pad is Landing Zone 1, where the historic first Falcon 9 landing occurred in December 2015. LC-13 was originally used as a launch pad for early Atlas missiles and rockets from Lockheed Martin. LC-1 was later expanded to include Landing Zone 2 for side booster RTLS Falcon Heavy missions, and it was first used in February 2018 for that purpose."
+      }
+    ],
+    "parameters": {
+      "id": {
+        "type": "string"
+      }
+    },
+    "api_call": "https://api.space.com/launchpads/{id}",
+    "subscriptions": {
+      "currency": "dollar",
+      "yearly": 100,
+      "monthly": 15
+    }
+  },
+  {
+    "api_id": 4,
+    "name": "SpaceX Rockets",
+    "category": "Rockets",
+    "description": "Get Rocket Details based on given id",
+    "type": "Get",
+    "response": [{
+      "id": "{id}",
+      "active": true,
+      "stages": 2,
+      "boosters": 0,
+      "cost_per_launch": 50000000,
+      "success_rate_pct": 97,
+      "first_flight": "2010-06-04",
+      "country": "United States",
+      "company": "SpaceX",
+      "height": {
+        "meters": 70,
+        "feet": 229.6
+      },
+      "diameter": {
+        "meters": 3.7,
+        "feet": 12
+      },
+      "mass": {
+        "kg": 549054,
+        "lb": 1207920
+      },
+      "engines": {
+        "number": 9,
+        "type": "merlin",
+        "version": "1D+",
+        "layout": "octaweb",
+        "engine_loss_max": 2,
+        "propellant_1": "liquid oxygen",
+        "propellant_2": "RP-1 kerosene"
+      }
+    }],
+    "parameters": {
+      "id": {
+        "type": "string"
+      }
+    },
+    "api_call": "https://api.space.com/rockets/{id}",
+    "subscriptions": {
+      "currency": "dollar",
+      "yearly": 100,
+      "monthly": 15
+    }
+  }
+]
